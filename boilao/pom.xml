@@ -20,6 +20,11 @@
             <artifactId>javafx-fxml</artifactId>
             <version>26.0.1</version>
         </dependency>
+        <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>17.6</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
