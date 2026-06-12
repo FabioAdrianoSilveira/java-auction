@@ -12,3 +12,5 @@ Descrição detalhada de tudo que precisa ser feito para rodar o projeto e testa
 - DOCS:	Commits que adicionam ou alteram documentação (ex: readme)
 - BUILD:	Commits que afetam a build do projeto (ex: adicionar/remover dependências do npm, arquivos Docker, etc.)
 - CHORE:	Commits que afetam “extras” (ex: modificar o .gitignore)
+
+O Pull Request deve seguir uma hierarquia baseada na lista acima, quando mais de um tipo de commit for feito na mesma branch, deve ser escolhido o tipo que vêm primeiro na lista para dar título ao PR
