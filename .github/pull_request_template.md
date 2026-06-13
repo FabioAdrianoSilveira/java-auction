@@ -14,3 +14,10 @@ Descrição detalhada de tudo que precisa ser feito para rodar o projeto e testa
 - CHORE:	Commits que afetam “extras” (ex: modificar o .gitignore)
 
 O Pull Request deve seguir uma hierarquia baseada na lista acima, quando mais de um tipo de commit for feito na mesma branch, deve ser escolhido o tipo que vêm primeiro na lista para dar título ao PR
+
+**Revisor** </br>
+Todo Pull Request deve possuir um revisor, como vamos trabalhar em equipes de 2, vamos definir o revisor como a pessoa que trabalha na sua camada da outra dupla, então será:
+
+Aline <-> Fábio 
+
+Kevin <-> Rebeca
