@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/26.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           prefWidth="1280.0"
+           prefHeight="720.0"
+           stylesheets="@css/licitante-leiloes.css"
+           styleClass="tela-licitante-leiloes">
+
+    <VBox alignment="TOP_LEFT"
+          prefWidth="1120.0"
+          maxWidth="1120.0"
+          prefHeight="620.0"
+          maxHeight="620.0"
+          spacing="14.0"
+          styleClass="painel-leiloes">
+
+        <padding>
+            <Insets top="22.0" right="25.0" bottom="35.0" left="25.0"/>
+        </padding>
+
+        <StackPane maxWidth="Infinity">
+            <Label text="VIZUALIZAR OS LEILÕES:"
+                   StackPane.alignment="CENTER_LEFT"
+                   styleClass="titulo-leiloes"/>
+
+            <Hyperlink fx:id="linkMenuPrincipal"
+                       text="Menu principal"
+                       StackPane.alignment="CENTER_RIGHT"
+                       styleClass="link-menu"/>
+        </StackPane>
+
+        <TableView fx:id="tabelaLeiloes"
+                   prefWidth="1070.0"
+                   prefHeight="500.0"
+                   styleClass="tabela-dados">
+
+            <placeholder>
+                <Label text="Nenhum leilão disponível"
+                       styleClass="texto-tabela-vazia"/>
+            </placeholder>
+
+            <columns>
+                <TableColumn fx:id="colunaId"
+                             text="ID"
+                             prefWidth="90.0"/>
+
+                <TableColumn fx:id="colunaTipoGado"
+                             text="TIPO DE GADO"
+                             prefWidth="180.0"/>
+
+                <TableColumn fx:id="colunaObservacoes"
+                             text="Observações"
+                             prefWidth="200.0"/>
+
+                <TableColumn fx:id="colunaLanceMinimo"
+                             text="Lance Mínimo:"
+                             prefWidth="125.0"/>
+
+                <TableColumn fx:id="colunaSeuLance"
+                             text="Seu lance:"
+                             prefWidth="125.0"/>
+
+                <TableColumn fx:id="colunaLanceVencedor"
+                             text="Lance Vencedor"
+                             prefWidth="145.0"/>
+
+                <TableColumn fx:id="colunaSituacao"
+                             text="Situação:"
+                             prefWidth="160.0"/>
+            </columns>
+        </TableView>
+    </VBox>
+</StackPane>

@@ -1,0 +1,138 @@
+.tela-cadastro-usuario {
+    -fx-background-color: #7b893b;
+}
+
+.painel-formulario,
+.painel-tabela {
+    -fx-background-color: #e7d5a8;
+    -fx-border-color: #7f913c;
+    -fx-border-width: 1px;
+}
+
+.link-menu {
+    -fx-font-family: "Arial";
+    -fx-font-size: 20px;
+    -fx-text-fill: black;
+    -fx-underline: true;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.link-menu:hover {
+    -fx-text-fill: #53621f;
+}
+
+.titulo-formulario,
+.titulo-tabela {
+    -fx-font-family: "Arial";
+    -fx-font-size: 31px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.rotulo-campo {
+    -fx-font-family: "Arial";
+    -fx-font-size: 19px;
+    -fx-text-fill: black;
+}
+
+.campo-formulario {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-font-family: "Arial";
+    -fx-font-size: 18px;
+    -fx-padding: 5px 10px;
+}
+
+.combo-admin {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-font-family: "Arial";
+    -fx-font-size: 18px;
+}
+
+.combo-admin .list-cell {
+    -fx-alignment: center;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.botao-cadastrar,
+.botao-deletar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family: "Arial";
+    -fx-font-size: 25px;
+    -fx-underline: true;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.botao-cadastrar { -fx-text-fill: green; }
+.botao-deletar { -fx-text-fill: red; }
+.botao-cadastrar:hover { -fx-text-fill: #005900; }
+.botao-deletar:hover { -fx-text-fill: #a50000; }
+
+.tabela-usuarios {
+    -fx-background-color: #e7d5a8;
+    -fx-border-color: #a529ff;
+    -fx-border-width: 2px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-padding: 0;
+}
+
+.tabela-usuarios .column-header-background,
+.tabela-usuarios .column-header,
+.tabela-usuarios .filler {
+    -fx-background-color: #e7d5a8;
+}
+
+.tabela-usuarios .column-header,
+.tabela-usuarios .filler {
+    -fx-border-color: #555555;
+    -fx-border-width: 0 1px 1px 0;
+    -fx-pref-height: 70px;
+}
+
+.tabela-usuarios .column-header .label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+}
+
+.tabela-usuarios .table-row-cell,
+.tabela-usuarios .table-row-cell:odd {
+    -fx-background-color: #e7d5a8;
+    -fx-cell-size: 70px;
+}
+
+.tabela-usuarios .table-row-cell:selected {
+    -fx-background-color: #c9bd91;
+}
+
+.tabela-usuarios .table-cell {
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px;
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-border-color: transparent #555555 #555555 transparent;
+    -fx-border-width: 0 1px 1px 0;
+    -fx-padding: 5px;
+}
+
+.texto-tabela-vazia {
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-text-fill: #555555;
+}

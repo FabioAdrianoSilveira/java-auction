@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/26.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           prefWidth="1280.0"
+           prefHeight="720.0"
+           stylesheets="@css/licitante-lance.css"
+           styleClass="tela-lance">
+
+    <VBox alignment="TOP_LEFT"
+          prefWidth="1080.0"
+          maxWidth="1080.0"
+          prefHeight="620.0"
+          maxHeight="620.0"
+          spacing="16.0"
+          styleClass="painel-lance">
+
+        <padding>
+            <Insets top="20.0" right="25.0" bottom="30.0" left="25.0"/>
+        </padding>
+
+        <StackPane maxWidth="Infinity">
+            <Label text="FAÇA SEU LANCE NO LEILÃO:"
+                   StackPane.alignment="CENTER_LEFT"
+                   styleClass="titulo-lance"/>
+            <Hyperlink fx:id="linkMenuPrincipal"
+                       text="Menu principal"
+                       StackPane.alignment="CENTER_RIGHT"
+                       styleClass="link-menu"/>
+        </StackPane>
+
+        <TableView fx:id="tabelaLeilaoSelecionado"
+                   prefWidth="1030.0"
+                   prefHeight="210.0"
+                   styleClass="tabela-dados">
+
+            <placeholder>
+                <Label text="Selecione um leilão"
+                       styleClass="texto-tabela-vazia"/>
+            </placeholder>
+
+            <columns>
+                <TableColumn fx:id="colunaId"
+                             text="ID"
+                             prefWidth="75.0"/>
+                <TableColumn fx:id="colunaTipoGado"
+                             text="TIPO DE GADO"
+                             prefWidth="155.0"/>
+                <TableColumn fx:id="colunaObservacoes"
+                             text="Observações"
+                             prefWidth="210.0"/>
+                <TableColumn fx:id="colunaLanceMinimo"
+                             text="Lance Mínimo:"
+                             prefWidth="135.0"/>
+                <TableColumn fx:id="colunaSeuLance"
+                             text="Seu lance:"
+                             prefWidth="135.0"/>
+                <TableColumn fx:id="colunaLanceVencedor"
+                             text="Lance Vencedor"
+                             prefWidth="160.0"/>
+                <TableColumn fx:id="colunaSituacao"
+                             text="Situação:"
+                             prefWidth="150.0"/>
+            </columns>
+        </TableView>
+
+        <HBox alignment="CENTER"
+              spacing="120.0">
+
+            <VBox alignment="TOP_LEFT"
+                  spacing="8.0">
+                <Label text="ID Leilão:"
+                       styleClass="rotulo-campo"/>
+                <TextField fx:id="campoIdLeilao"
+                           prefWidth="300.0"
+                           prefHeight="55.0"
+                           styleClass="campo-texto"/>
+
+                <Label text="Seu Lance:"
+                       styleClass="rotulo-campo"/>
+                <TextField fx:id="campoSeuLance"
+                           prefWidth="300.0"
+                           prefHeight="55.0"
+                           styleClass="campo-texto"/>
+            </VBox>
+
+            <Button fx:id="botaoFazerLance"
+                    text="FAZER LANCE"
+                    prefWidth="260.0"
+                    prefHeight="90.0"
+                    styleClass="botao-fazer-lance"/>
+        </HBox>
+    </VBox>
+</StackPane>

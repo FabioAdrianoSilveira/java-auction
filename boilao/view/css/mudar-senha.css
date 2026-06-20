@@ -1,0 +1,64 @@
+.tela-mudar-senha {
+    -fx-background-color: #7b893b;
+}
+
+.painel-mudar-senha {
+    -fx-background-color: #e7d5a8;
+    -fx-border-color: #829440;
+    -fx-border-width: 1px;
+}
+
+.titulo {
+    -fx-font-family: "Arial";
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.rotulo-senha {
+    -fx-font-family: "Arial";
+    -fx-font-size: 29px;
+    -fx-text-fill: black;
+}
+
+.campo-senha {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 0;
+    -fx-font-family: "Arial";
+    -fx-font-size: 22px;
+    -fx-padding: 5px 10px;
+}
+
+.botao-alterar {
+    -fx-background-color: #ba6a54;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0;
+    -fx-font-family: "Arial";
+    -fx-font-size: 36px;
+    -fx-text-fill: black;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.botao-alterar:hover {
+    -fx-background-color: #a95c48;
+}
+
+.botao-voltar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family: "Arial";
+    -fx-font-size: 22px;
+    -fx-text-fill: red;
+    -fx-underline: true;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.botao-voltar:hover {
+    -fx-text-fill: #a50000;
+}

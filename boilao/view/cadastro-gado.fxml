@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/26.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           prefWidth="1280.0"
+           prefHeight="720.0"
+           stylesheets="@css/cadastro-gado.css"
+           styleClass="tela-cadastro-gado">
+
+    <fx:define>
+        <ToggleGroup fx:id="grupoPrenhez"/>
+        <ToggleGroup fx:id="grupoSexoLeilao"/>
+    </fx:define>
+
+    <VBox alignment="TOP_LEFT"
+          prefWidth="1020.0"
+          maxWidth="1020.0"
+          prefHeight="590.0"
+          maxHeight="590.0"
+          spacing="0"
+          styleClass="painel-cadastro-gado">
+
+        <padding>
+            <Insets top="25.0" right="25.0" bottom="20.0" left="25.0"/>
+        </padding>
+
+        <Label text="CADASTRO DE GADO" styleClass="titulo-tela"/>
+        <Region prefHeight="35.0"/>
+
+        <HBox alignment="TOP_LEFT" spacing="30.0">
+            <VBox prefWidth="230.0" maxWidth="230.0" spacing="8.0">
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <Label text="ID:" styleClass="rotulo-campo"/>
+                    <TextField fx:id="campoId" prefWidth="90.0" prefHeight="43.0" styleClass="campo-texto"/>
+                </HBox>
+
+                <Region prefHeight="12.0"/>
+                <Label text="NOME:" styleClass="rotulo-campo"/>
+                <TextField fx:id="campoNome" prefWidth="225.0" prefHeight="43.0" styleClass="campo-texto"/>
+
+                <Label text="RAÇA:" styleClass="rotulo-campo"/>
+                <TextField fx:id="campoRaca" prefWidth="225.0" prefHeight="43.0" styleClass="campo-texto"/>
+
+                <Label text="SEXO:" styleClass="rotulo-campo"/>
+                <TextField fx:id="campoSexo" prefWidth="145.0" prefHeight="43.0" styleClass="campo-texto"/>
+            </VBox>
+
+            <VBox prefWidth="385.0" maxWidth="385.0" spacing="10.0">
+                <HBox alignment="CENTER_LEFT" spacing="16.0">
+                    <Label text="PRENHEZ:" styleClass="rotulo-campo"/>
+                    <RadioButton fx:id="radioPrenhezSim" text="Sim" toggleGroup="$grupoPrenhez" styleClass="radio-opcao"/>
+                    <RadioButton fx:id="radioPrenhezNao" text="Não" toggleGroup="$grupoPrenhez" styleClass="radio-opcao"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <Label text="Número de&#10;crias anteriores:" wrapText="true" prefWidth="245.0" styleClass="rotulo-multilinha"/>
+                    <TextField fx:id="campoNumeroCriasAnteriores" prefWidth="75.0" prefHeight="43.0" styleClass="campo-texto"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <Label text="Taxa de Sucesso&#10;de Inseminação:" wrapText="true" prefWidth="245.0" styleClass="rotulo-multilinha"/>
+                    <TextField fx:id="campoTaxaSucessoInseminacao" prefWidth="75.0" prefHeight="43.0" styleClass="campo-texto"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <Label text="Nº de Inseminações&#10;realizadas:" wrapText="true" prefWidth="245.0" styleClass="rotulo-multilinha"/>
+                    <TextField fx:id="campoNumeroInseminacoes" prefWidth="75.0" prefHeight="43.0" styleClass="campo-texto"/>
+                </HBox>
+
+                <Region prefHeight="22.0"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <Label text="Leiloar:" styleClass="rotulo-campo"/>
+                    <RadioButton fx:id="radioLeiloarMacho" text="Macho" toggleGroup="$grupoSexoLeilao" styleClass="radio-opcao"/>
+                    <RadioButton fx:id="radioLeiloarFemea" text="Fêmea" toggleGroup="$grupoSexoLeilao" styleClass="radio-opcao"/>
+                </HBox>
+            </VBox>
+
+            <VBox prefWidth="270.0" maxWidth="270.0" spacing="8.0">
+                <HBox alignment="CENTER_LEFT" spacing="12.0">
+                    <Label text="IDADE:" styleClass="rotulo-campo"/>
+                    <TextField fx:id="campoIdade" prefWidth="170.0" prefHeight="43.0" styleClass="campo-texto"/>
+                </HBox>
+
+                <Region prefHeight="10.0"/>
+                <Label text="NOME DA MÃE:" styleClass="rotulo-campo"/>
+                <TextField fx:id="campoNomeMae" prefWidth="270.0" prefHeight="43.0" styleClass="campo-texto"/>
+
+                <Label text="NOME DO PAI:" styleClass="rotulo-campo"/>
+                <TextField fx:id="campoNomePai" prefWidth="270.0" prefHeight="43.0" styleClass="campo-texto"/>
+            </VBox>
+        </HBox>
+
+        <Region VBox.vgrow="ALWAYS"/>
+
+        <HBox alignment="CENTER_RIGHT" spacing="45.0">
+            <Button fx:id="botaoVoltarMenu" text="VOLTAR" styleClass="botao-voltar"/>
+            <Button fx:id="botaoAvancar" text="AVANÇAR" styleClass="botao-avancar"/>
+        </HBox>
+    </VBox>
+</StackPane>
