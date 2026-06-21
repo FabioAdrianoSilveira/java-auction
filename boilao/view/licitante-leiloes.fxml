@@ -28,7 +28,7 @@
         </padding>
 
         <StackPane maxWidth="Infinity">
-            <Label text="VIZUALIZAR OS LEILÕES:"
+            <Label text="VISUALIZAR OS LEILÕES:"
                    StackPane.alignment="CENTER_LEFT"
                    styleClass="titulo-leiloes"/>
 

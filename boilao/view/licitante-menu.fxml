@@ -27,12 +27,12 @@
         </padding>
 
         <Hyperlink fx:id="linkLogout"
-                   text="LogOut"
+                   text="Logout"
                    maxWidth="Infinity"
                    alignment="CENTER_RIGHT"
                    styleClass="link-logout"/>
 
-        <Label text="Bem vindo ao Boilão"
+        <Label text="Bem-vindo ao Boilão"
                maxWidth="Infinity"
                alignment="CENTER"
                styleClass="titulo-menu"/>

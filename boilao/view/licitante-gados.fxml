@@ -33,11 +33,11 @@
               maxWidth="400.0"
               spacing="28.0">
 
-            <Label text="BEM VINDO AO BOILÃO"
+            <Label text="BEM-VINDO AO BOILÃO"
                    styleClass="titulo-bem-vindo"/>
 
             <Button fx:id="botaoHistorico"
-                    text="Historico"
+                    text="Histórico"
                     prefWidth="260.0"
                     prefHeight="85.0"
                     styleClass="botao-lateral"/>
