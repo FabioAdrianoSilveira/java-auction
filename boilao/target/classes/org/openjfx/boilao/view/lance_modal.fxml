@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.Cursor?>
+
+<VBox prefWidth="420.0" prefHeight="380.0" spacing="15.0" style="-fx-background-color: #f8f9fa;" 
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="org.openjfx.boilao.controller.LanceModalController">
+    <padding>
+        <Insets top="25.0" right="30.0" bottom="25.0" left="30.0"/>
+    </padding>
+    <children>
+        
+        <VBox spacing="5.0">
+            <children>
+                <Label text="Registrar Lance" textFill="#1976D2">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label text="Confira os valores atuais antes de enviar a sua proposta." textFill="#6c757d" wrapText="true" />
+            </children>
+        </VBox>
+
+        <VBox spacing="10.0" style="-fx-background-color: #e9ecef; -fx-padding: 15; -fx-background-radius: 8; -fx-border-color: #dee2e6; -fx-border-radius: 8;">
+            <children>
+                <HBox spacing="10.0">
+                    <children>
+                        <Label text="Leilão ID:" style="-fx-font-weight: bold;" textFill="#495057" />
+                        <Label fx:id="lblIdLeilao" text="0" textFill="#212529" />
+                    </children>
+                </HBox>
+                <HBox spacing="10.0">
+                    <children>
+                        <Label text="Animal:" style="-fx-font-weight: bold;" textFill="#495057" />
+                        <Label fx:id="lblNomeGado" text="Carregando..." textFill="#212529" />
+                    </children>
+                </HBox>
+                <HBox spacing="10.0">
+                    <children>
+                        <Label text="Lance Mínimo:" style="-fx-font-weight: bold;" textFill="#495057" />
+                        <Label fx:id="lblLanceMinimo" text="R$ 0,00" textFill="#212529" />
+                    </children>
+                </HBox>
+                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="Maior Lance Atual:" style="-fx-font-weight: bold;" textFill="#495057" />
+                        <Label fx:id="lblMaiorLance" text="R$ 0,00" textFill="#2e7d32">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <VBox spacing="5.0">
+            <children>
+                <Label text="Seu Lance (R$)" style="-fx-font-weight: bold;" textFill="#495057" />
+                <TextField fx:id="txtValorLance" prefHeight="40.0" promptText="Digite o valor da sua oferta (Ex: 3500.00)" 
+                           style="-fx-background-color: white; -fx-border-color: #1976D2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-size: 14px; -fx-font-weight: bold;" />
+            </children>
+        </VBox>
+
+        <HBox alignment="CENTER_RIGHT" spacing="12.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Button onAction="#handleCancelar" prefHeight="38.0" prefWidth="100.0" text="Cancelar" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;" />
+                <Button onAction="#handleConfirmarLance" prefHeight="38.0" prefWidth="150.0" text="Confirmar Lance" style="-fx-background-color: #2E7D32; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+        </HBox>
+        
+        <Label fx:id="lblMensagem" alignment="CENTER" maxWidth="360.0" textAlignment="CENTER" wrapText="true" />
+    </children>
+</VBox>

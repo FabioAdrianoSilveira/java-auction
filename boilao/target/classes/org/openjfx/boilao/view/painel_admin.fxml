@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.Cursor?>
+
+<BorderPane prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: #f8f9fa;" 
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="org.openjfx.boilao.controller.PainelAdminController">
+    
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="65.0" spacing="20.0" 
+              style="-fx-background-color: #2C3E50; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+            <padding>
+                <Insets left="25.0" right="25.0" />
+            </padding>
+            <children>
+                <Label text="BOILÃO - LEILÕES" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label text="|   Painel de Administração" textFill="#cfd8dc">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                
+                <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS" spacing="15.0">
+                    <children>
+                        <Label fx:id="lblAdminLogado" text="Admin conectado" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Button onAction="#handleAlterarSenha" style="-fx-background-color: #546E7A; -fx-text-fill: white; -fx-background-radius: 4;" text="Alterar Senha">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button onAction="#handleLogout" style="-fx-background-color: #d32f2f; -fx-text-fill: white; -fx-background-radius: 4; -fx-font-weight: bold;" text="Sair">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="25.0" />
+            </padding>
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Controle de Usuários" textFill="#343a40">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label text="Visualize, cadastre ou remova licitantes e administradores do sistema." textFill="#6c757d" />
+                    </children>
+                </VBox>
+                
+                <TableView fx:id="tblUsuarios" prefHeight="400.0" VBox.vgrow="ALWAYS" 
+                           style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #dee2e6;">
+                    <columns>
+                        <TableColumn fx:id="colCnpj" prefWidth="200.0" text="CNPJ" style="-fx-alignment: CENTER;" />
+                        <TableColumn fx:id="colRazao" prefWidth="400.0" text="Razão Social / Nome" />
+                        <TableColumn fx:id="colTipo" prefWidth="200.0" text="Tipo de Conta" style="-fx-alignment: CENTER;" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                
+                <HBox alignment="CENTER_RIGHT" spacing="12.0">
+                    <children>
+                        <Button onAction="#handleAtualizarTabela" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;" prefHeight="38.0" text="Atualizar Lista" />
+                        <Button onAction="#handleExcluirUsuario" style="-fx-background-color: #e53935; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;" prefHeight="38.0" text="Excluir Usuário">
+                            <cursor><Cursor fx:constant="HAND" /></cursor>
+                        </Button>
+                        <Button onAction="#handleNovoUsuario" style="-fx-background-color: #1976D2; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;" prefHeight="38.0" prefWidth="130.0" text="+ Novo Usuário">
+                            <cursor><Cursor fx:constant="HAND" /></cursor>
+                        </Button>
+                        <Button onAction="#handleNovoGado" style="-fx-background-color: #2E7D32; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;" prefHeight="38.0" prefWidth="140.0" text="+ Cadastrar Gado">
+                            <cursor><Cursor fx:constant="HAND" /></cursor>
+                        </Button>
+                        
+                        <Button onAction="#handleAgendarLeilao" style="-fx-background-color: #F57C00; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;" prefHeight="38.0" prefWidth="140.0" text="Agendar Leilão">
+                            <cursor><Cursor fx:constant="HAND" /></cursor>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

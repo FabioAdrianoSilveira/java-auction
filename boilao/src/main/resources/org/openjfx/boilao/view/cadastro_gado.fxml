@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.Cursor?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox prefWidth="650.0" prefHeight="700.0" spacing="20.0" style="-fx-background-color: #f8f9fa;" 
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="org.openjfx.boilao.controller.CadastroGadoController">
+    <padding>
+        <Insets top="30.0" right="40.0" bottom="30.0" left="40.0"/>
+    </padding>
+    <children>
+        
+        <VBox spacing="5.0">
+            <children>
+                <Label text="Cadastrar Novo Gado" textFill="#2E7D32">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label text="Insira as características do animal para disponibilizá-lo em futuros leilões." textFill="#6c757d" />
+            </children>
+        </VBox>
+
+        <GridPane hgap="15.0" vgap="15.0">
+            <children>
+                <VBox spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
+                    <children>
+                        <Label text="Nome / Identificação do Animal" style="-fx-font-weight: bold;" textFill="#495057" />
+                        <TextField fx:id="txtNome" prefHeight="35.0" promptText="Ex: Nelore Bruto 01" style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                    </children>
+                </VBox>
+                
+                <VBox spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <children>
+                        <Label text="Idade (Meses)" style="-fx-font-weight: bold;" textFill="#495057" />
+                        <TextField fx:id="txtIdade" prefHeight="35.0" promptText="Ex: 24" style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                    </children>
+                </VBox>
+                
+                <VBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <children>
+                        <Label text="Peso (kg)" style="-fx-font-weight: bold;" textFill="#495057" />
+                        <TextField fx:id="txtPeso" prefHeight="35.0" promptText="Ex: 550.50" style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <children>
+                        <Label text="Raça" style="-fx-font-weight: bold;" textFill="#495057" />
+                        <ComboBox fx:id="cbRaca" prefHeight="35.0" prefWidth="300.0" promptText="Selecione..." style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <children>
+                        <Label text="Sexo / Tipo" style="-fx-font-weight: bold;" textFill="#495057" />
+                        <ComboBox fx:id="cbTipoGado" prefHeight="35.0" prefWidth="300.0" promptText="Selecione..." style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="MACHO" />
+                                    <String fx:value="FEMEA" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <children>
+                        <Label text="Nome do Pai (Genealogia)" textFill="#495057" />
+                        <TextField fx:id="txtNomePai" prefHeight="35.0" promptText="Opcional" style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <children>
+                        <Label text="Nome da Mãe (Genealogia)" textFill="#495057" />
+                        <TextField fx:id="txtNomeMae" prefHeight="35.0" promptText="Opcional" style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+
+        <VBox fx:id="boxMacho" spacing="15.0" style="-fx-background-color: #e3f2fd; -fx-padding: 15; -fx-background-radius: 8;">
+            <children>
+                <Label text="Especificações do Reprodutor (Macho)" textFill="#0d47a1" style="-fx-font-weight: bold;" />
+                <HBox spacing="15.0">
+                    <children>
+                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Taxa de Sucesso de Fertilização (%)" textFill="#495057" />
+                                <TextField fx:id="txtTaxaFertilizacao" prefHeight="35.0" promptText="Ex: 85.5" style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Inseminações Realizadas" textFill="#495057" />
+                                <TextField fx:id="txtInseminacoes" prefHeight="35.0" promptText="Ex: 12" style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <VBox fx:id="boxFemea" spacing="15.0" style="-fx-background-color: #fce4ec; -fx-padding: 15; -fx-background-radius: 8;">
+            <children>
+                <Label text="Especificações da Matriz (Fêmea)" textFill="#880e4f" style="-fx-font-weight: bold;" />
+                <HBox spacing="15.0">
+                    <children>
+                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Estado de Prenhez" textFill="#495057" />
+                                <ComboBox fx:id="cbPrenhez" prefHeight="35.0" prefWidth="300.0" promptText="Selecione..." style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Número de Crias Anteriores" textFill="#495057" />
+                                <TextField fx:id="txtCriasAnteriores" prefHeight="35.0" promptText="Ex: 3" style="-fx-background-color: white; -fx-border-color: #ced4da; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <VBox spacing="5.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label text="Observações / Detalhes Adicionais" textFill="#495057" style="-fx-font-weight: bold;"/>
+                <TextArea fx:id="txtObservacoes" prefHeight="80.0" promptText="Ex: Histórico de vacinação completo, temperamento dócil..." wrapText="true" style="-fx-border-color: #ced4da; -fx-border-radius: 5;" />
+            </children>
+        </VBox>
+
+        <HBox alignment="CENTER_RIGHT" spacing="15.0">
+            <children>
+                <Button onAction="#handleCancelar" prefHeight="40.0" prefWidth="120.0" text="Cancelar" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;" />
+                <Button onAction="#handleSalvar" prefHeight="40.0" prefWidth="150.0" text="Salvar Gado" style="-fx-background-color: #2E7D32; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                </Button>
+            </children>
+        </HBox>
+        
+        <Label fx:id="lblMensagem" alignment="CENTER" maxWidth="600.0" textAlignment="CENTER" />
+    </children>
+</VBox>

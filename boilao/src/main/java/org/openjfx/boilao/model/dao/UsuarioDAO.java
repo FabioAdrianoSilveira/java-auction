@@ -21,22 +21,23 @@ public class UsuarioDAO {
 
     public boolean login() {
         try {
-            String sql = "SELECT cnpj FROM usuario WHERE cnpj = ? AND senha = ?";
+            String sql = "SELECT cnpj, tipo, razao FROM usuario WHERE cnpj = ? AND senha = ?";
             this.cmd = this.con.prepareStatement(sql);
             this.cmd.setString(1, this.user.getCnpj());
             this.cmd.setString(2, this.user.getSenha());
             ResultSet rs = this.cmd.executeQuery();
-            return rs.next();
+            
+            if (rs.next()) {
+                this.user.setTipo(TIPO.valueOf(rs.getString("tipo")));
+                this.user.setRazao(rs.getString("razao"));
+                return true;
+            }
+            return false;
         } catch (SQLException e) {
+            e.printStackTrace();
             return false;
         } finally {
-            // A conexão Singleton não deve ser fechada depois da operação, apenas quando o programa for fechado
-            if (this.cmd != null) {
-                try {
-                    this.cmd.close();
-                } catch (SQLException e) {
-                }
-            }
+            if (this.cmd != null) { try { this.cmd.close(); } catch (SQLException e) {} }
         }
     }
 
@@ -56,18 +57,11 @@ public class UsuarioDAO {
             this.con.rollback();
             return false;
         } catch (SQLException e) {
-            try {
-                this.con.rollback();
-            } catch (SQLException ex) {
-            }
+            e.printStackTrace();
+            try { this.con.rollback(); } catch (SQLException ex) {}
             return false;
         } finally {
-            if (this.cmd != null) {
-                try {
-                    this.cmd.close();
-                } catch (SQLException e) {
-                }
-            }
+            if (this.cmd != null) { try { this.cmd.close(); } catch (SQLException e) {} }
         }
     }
 
@@ -84,18 +78,11 @@ public class UsuarioDAO {
             this.con.rollback();
             return false;
         } catch (SQLException e) {
-            try {
-                this.con.rollback();
-            } catch (SQLException ex) {
-            }
+            e.printStackTrace();
+            try { this.con.rollback(); } catch (SQLException ex) {}
             return false;
         } finally {
-            if (this.cmd != null) {
-                try {
-                    this.cmd.close();
-                } catch (SQLException e) {
-                }
-            }
+            if (this.cmd != null) { try { this.cmd.close(); } catch (SQLException e) {} }
         }
     }
 
@@ -113,24 +100,18 @@ public class UsuarioDAO {
             this.con.rollback();
             return false;
         } catch (SQLException e) {
-            try {
-                this.con.rollback();
-            } catch (SQLException ex) {
-            }
+            e.printStackTrace();
+            try { this.con.rollback(); } catch (SQLException ex) {}
             return false;
         } finally {
-            if (this.cmd != null) {
-                try {
-                    this.cmd.close();
-                } catch (SQLException e) {
-                }
-            }
+            if (this.cmd != null) { try { this.cmd.close(); } catch (SQLException e) {} }
         }
     }
 
     public List<Usuario> listarLicitantes() {
         try {
-            String sql = "SELECT cnpj, razao FROM usuario WHERE tipo = 'LICITANTE' ORDER BY razao";
+            // Removido o filtro WHERE tipo = 'LICITANTE' para listar TODOS no Painel do Admin
+            String sql = "SELECT cnpj, razao, tipo FROM usuario ORDER BY razao";
             this.cmd = this.con.prepareStatement(sql);
             ResultSet rs = this.cmd.executeQuery();
 
@@ -139,19 +120,19 @@ public class UsuarioDAO {
                 Usuario u = new Usuario();
                 u.setCnpj(rs.getString("cnpj"));
                 u.setRazao(rs.getString("razao"));
-                u.setTipo(TIPO.LICITANTE);
+                u.setTipo(TIPO.valueOf(rs.getString("tipo")));
                 lista.add(u);
             }
             return lista;
         } catch (SQLException e) {
+            e.printStackTrace();
             return null;
         } finally {
-            if (this.cmd != null) {
-                try {
-                    this.cmd.close();
-                } catch (SQLException e) {
-                }
-            }
+            if (this.cmd != null) { try { this.cmd.close(); } catch (SQLException e) {} }
         }
+    }
+
+    public Usuario getUser() {
+        return user;
     }
 }

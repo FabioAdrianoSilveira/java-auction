@@ -1,9 +1,11 @@
 package org.openjfx.boilao.model;
 
+import org.openjfx.boilao.model.enums.TIPO;
+
 public class SessaoUsuario {
     private static String cnpjLogado;
+    private static TIPO tipoLogado; // Adicionado aqui
 
-    // Construtor privado para evitar instanciação
     private SessaoUsuario() {}
 
     public static String getCnpjLogado() {
@@ -14,7 +16,16 @@ public class SessaoUsuario {
         SessaoUsuario.cnpjLogado = cnpj;
     }
 
+    public static TIPO getTipoLogado() { // Adicionado
+        return tipoLogado;
+    }
+
+    public static void setTipoLogado(TIPO tipo) { // Adicionado
+        SessaoUsuario.tipoLogado = tipo;
+    }
+
     public static void limparSessao() {
         cnpjLogado = null;
+        tipoLogado = null; // Adicionado
     }
 }

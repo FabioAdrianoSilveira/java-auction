@@ -18,7 +18,8 @@ public class LanceDAO {
 
     public boolean inserir() {
         try {
-            String sql = "INSERT INTO lance (valor, id_leilao, cnpj_licitante, datalance) VALUES (?, ?, ?, ?)";
+            // Nomes das colunas corrigidos conforme o banco de dados
+            String sql = "INSERT INTO lance (valor, leilao_id, licitante_cnpj, data_lance) VALUES (?, ?, ?, ?)";
             this.cmd = this.con.prepareStatement(sql);
             this.cmd.setDouble(1, this.lance.getValor());
             this.cmd.setInt(2, this.lance.getLeilao().getId());
@@ -32,18 +33,11 @@ public class LanceDAO {
             this.con.rollback();
             return false;
         } catch (SQLException e) {
-            try {
-                this.con.rollback();
-            } catch (SQLException ex) {
-            }
+            e.printStackTrace(); // Radar de erros ligado
+            try { this.con.rollback(); } catch (SQLException ex) {}
             return false;
         } finally {
-            if (this.cmd != null) {
-                try {
-                    this.cmd.close();
-                } catch (SQLException e) {
-                }
-            }
+            if (this.cmd != null) { try { this.cmd.close(); } catch (SQLException e) {} }
         }
     }
 }
