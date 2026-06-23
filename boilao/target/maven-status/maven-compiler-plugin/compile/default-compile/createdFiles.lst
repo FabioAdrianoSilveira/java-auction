@@ -1,0 +1,12 @@
+org\openjfx\boilao\App.class
+org\openjfx\boilao\TesteBackend.class
+org\openjfx\boilao\controller\UsuarioController.class
+org\openjfx\boilao\dao\DatabaseConnection.class
+org\openjfx\boilao\SecondaryController.class
+module-info.class
+org\openjfx\boilao\util\SessaoUsuario.class
+org\openjfx\boilao\model\UsuarioModel.class
+org\openjfx\boilao\model\enums\TIPO.class
+org\openjfx\boilao\dao\UsuarioDAO.class
+org\openjfx\boilao\model\Usuario.class
+org\openjfx\boilao\PrimaryController.class
