@@ -1,0 +1,96 @@
+.tela-tabelas {
+    -fx-background-color: #7b893b;
+}
+
+.painel-principal {
+    -fx-background-color: #e7d5a8;
+    -fx-border-color: #839440;
+    -fx-border-width: 1px;
+}
+
+.titulo-principal {
+    -fx-font-family: "Arial";
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.link-menu {
+    -fx-font-family: "Arial";
+    -fx-font-size: 19px;
+    -fx-text-fill: black;
+    -fx-underline: true;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.link-menu:hover {
+    -fx-text-fill: #52611f;
+}
+
+.titulo-secao {
+    -fx-font-family: "Arial";
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.tabela-dados {
+    -fx-background-color: #e7d5a8;
+    -fx-border-color: #555555;
+    -fx-border-width: 1px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-padding: 0;
+}
+
+.tabela-dados .column-header-background,
+.tabela-dados .column-header,
+.tabela-dados .filler {
+    -fx-background-color: #e7d5a8;
+}
+
+.tabela-dados .column-header,
+.tabela-dados .filler {
+    -fx-border-color: transparent #555555 #555555 transparent;
+    -fx-border-width: 0 1px 1px 0;
+    -fx-pref-height: 70px;
+}
+
+.tabela-dados .column-header .label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+    -fx-padding: 3px;
+}
+
+.tabela-dados .table-row-cell,
+.tabela-dados .table-row-cell:odd {
+    -fx-background-color: #e7d5a8;
+    -fx-cell-size: 90px;
+}
+
+.tabela-dados .table-row-cell:selected {
+    -fx-background-color: #c8ba8c;
+}
+
+.tabela-dados .table-cell {
+    -fx-font-family: "Arial";
+    -fx-font-size: 11px;
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-wrap-text: true;
+    -fx-border-color: transparent #555555 #555555 transparent;
+    -fx-border-width: 0 1px 1px 0;
+    -fx-padding: 5px;
+}
+
+.texto-tabela-vazia {
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-text-fill: #555555;
+}

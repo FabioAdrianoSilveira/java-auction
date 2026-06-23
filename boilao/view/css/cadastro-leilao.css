@@ -1,0 +1,89 @@
+.tela-cadastro-leilao {
+    -fx-background-color: #7b893b;
+}
+
+.painel-cadastro-leilao {
+    -fx-background-color: #e7d5a8;
+    -fx-border-color: #839440;
+    -fx-border-width: 1px;
+}
+
+.titulo-tela {
+    -fx-font-family: "Arial";
+    -fx-font-size: 31px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.subtitulo-tela {
+    -fx-font-family: "Arial";
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+}
+
+.rotulo-campo {
+    -fx-font-family: "Arial";
+    -fx-font-size: 19px;
+    -fx-text-fill: black;
+}
+
+.campo-texto,
+.campo-data {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-font-family: "Arial";
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+}
+
+.campo-texto {
+    -fx-padding: 5px 8px;
+}
+
+.campo-data .text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-font-family: "Arial";
+    -fx-font-size: 17px;
+}
+
+.campo-data .arrow-button {
+    -fx-background-color: #d9c796;
+    -fx-background-radius: 0;
+}
+
+.campo-observacoes {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-font-family: "Arial";
+    -fx-font-size: 17px;
+    -fx-text-fill: black;
+    -fx-padding: 4px;
+}
+
+.campo-observacoes .content {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+}
+
+.botao-voltar,
+.botao-cadastrar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family: "Arial";
+    -fx-font-size: 25px;
+    -fx-underline: true;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.botao-voltar { -fx-text-fill: red; }
+.botao-cadastrar { -fx-text-fill: green; }
+.botao-voltar:hover { -fx-text-fill: #a50000; }
+.botao-cadastrar:hover { -fx-text-fill: #005900; }

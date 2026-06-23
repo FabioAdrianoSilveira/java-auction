@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/26.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           prefWidth="1280.0"
+           prefHeight="720.0"
+           stylesheets="@css/cadastro-usuario.css"
+           styleClass="tela-cadastro-usuario">
+
+    <HBox alignment="CENTER" spacing="55.0">
+        <VBox alignment="TOP_CENTER"
+              prefWidth="480.0"
+              maxWidth="480.0"
+              prefHeight="620.0"
+              maxHeight="620.0"
+              spacing="0"
+              styleClass="painel-formulario">
+
+            <padding>
+                <Insets top="15.0" right="70.0" bottom="25.0" left="70.0"/>
+            </padding>
+
+            <Hyperlink fx:id="linkMenu"
+                       text="MENU"
+                       maxWidth="Infinity"
+                       alignment="CENTER_RIGHT"
+                       styleClass="link-menu"/>
+
+            <Label text="Cadastro Usuário" styleClass="titulo-formulario"/>
+            <Region prefHeight="40.0"/>
+
+            <VBox alignment="CENTER_LEFT" maxWidth="340.0" prefWidth="340.0" spacing="8.0">
+                <Label text="CNPJ:" styleClass="rotulo-campo"/>
+                <TextField fx:id="campoCnpj"
+                           prefHeight="48.0"
+                           maxWidth="Infinity"
+                           styleClass="campo-formulario"/>
+
+                <Region prefHeight="20.0"/>
+
+                <Label text="NOME DA FAZENDA:" styleClass="rotulo-campo"/>
+                <TextField fx:id="campoNomeFazenda"
+                           prefHeight="48.0"
+                           maxWidth="Infinity"
+                           styleClass="campo-formulario"/>
+
+                <Region prefHeight="12.0"/>
+
+                <Label text="ADMIN:" styleClass="rotulo-campo"/>
+                <ComboBox fx:id="comboAdmin"
+                          promptText="(Selecione)"
+                          prefHeight="48.0"
+                          maxWidth="Infinity"
+                          styleClass="combo-admin"/>
+            </VBox>
+
+            <Region prefHeight="45.0"/>
+
+            <Button fx:id="botaoCadastrar"
+                    text="CADASTRAR"
+                    styleClass="botao-cadastrar"/>
+
+            <Region prefHeight="18.0"/>
+
+            <Button fx:id="botaoDeletar"
+                    text="DELETAR"
+                    styleClass="botao-deletar"/>
+        </VBox>
+
+        <VBox alignment="TOP_CENTER"
+              prefWidth="610.0"
+              maxWidth="610.0"
+              prefHeight="620.0"
+              maxHeight="620.0"
+              spacing="15.0"
+              styleClass="painel-tabela">
+
+            <padding>
+                <Insets top="20.0" right="45.0" bottom="35.0" left="45.0"/>
+            </padding>
+
+            <Label text="DADOS DOS USUÁRIOS:" styleClass="titulo-tabela"/>
+
+            <TableView fx:id="tabelaUsuarios"
+                       prefWidth="520.0"
+                       prefHeight="480.0"
+                       maxWidth="520.0"
+                       maxHeight="480.0"
+                       styleClass="tabela-usuarios">
+                <placeholder>
+                    <Label text="Nenhum usuário cadastrado" styleClass="texto-tabela-vazia"/>
+                </placeholder>
+                <columns>
+                    <TableColumn fx:id="colunaCnpj" text="CNPJ's CADASTRADOS" prefWidth="195.0"/>
+                    <TableColumn fx:id="colunaRazao" text="Razão" prefWidth="155.0"/>
+                    <TableColumn fx:id="colunaUsuario" text="Usuários" prefWidth="168.0"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+</StackPane>

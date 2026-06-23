@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/26.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           prefWidth="1280.0"
+           prefHeight="720.0"
+           stylesheets="@css/licitante-historico.css"
+           styleClass="tela-historico">
+
+    <VBox prefWidth="1210.0"
+          maxWidth="1210.0"
+          prefHeight="650.0"
+          maxHeight="650.0"
+          spacing="12.0"
+          styleClass="painel-historico">
+
+        <padding>
+            <Insets top="12.0" right="20.0" bottom="30.0" left="20.0"/>
+        </padding>
+
+        <StackPane maxWidth="Infinity">
+            <Label text="BEM-VINDO AO BOILÃO"
+                   StackPane.alignment="CENTER_LEFT"
+                   styleClass="titulo-bem-vindo"/>
+            <Hyperlink fx:id="linkLogout"
+                       text="Logout"
+                       StackPane.alignment="CENTER_RIGHT"
+                       styleClass="link-logout"/>
+        </StackPane>
+
+        <HBox alignment="TOP_LEFT"
+              spacing="45.0">
+
+            <VBox alignment="TOP_CENTER"
+                  prefWidth="240.0"
+                  maxWidth="240.0"
+                  spacing="18.0">
+
+                <Button fx:id="botaoCadastroGado"
+                        text="Cadastro&#10;de Gado"
+                        wrapText="true"
+                        prefWidth="220.0"
+                        prefHeight="90.0"
+                        styleClass="botao-lateral"/>
+
+                <Button fx:id="botaoVisualizarLeiloes"
+                        text="Visualizar&#10;Leilões"
+                        wrapText="true"
+                        prefWidth="220.0"
+                        prefHeight="90.0"
+                        styleClass="botao-lateral"/>
+            </VBox>
+
+            <VBox alignment="TOP_CENTER"
+                  prefWidth="850.0"
+                  maxWidth="850.0"
+                  spacing="10.0">
+
+                <Label text="Histórico:"
+                       styleClass="titulo-historico"/>
+
+                <TableView fx:id="tabelaHistorico"
+                           prefWidth="850.0"
+                           prefHeight="500.0"
+                           styleClass="tabela-dados">
+
+                    <placeholder>
+                        <Label text="Nenhum registro no histórico"
+                               styleClass="texto-tabela-vazia"/>
+                    </placeholder>
+
+                    <columns>
+                        <TableColumn fx:id="colunaData"
+                                     text="Data:"
+                                     prefWidth="100.0"/>
+                        <TableColumn fx:id="colunaId"
+                                     text="ID"
+                                     prefWidth="120.0"/>
+                        <TableColumn fx:id="colunaTipoGado"
+                                     text="TIPO DE GADO"
+                                     prefWidth="170.0"/>
+                        <TableColumn fx:id="colunaObservacoes"
+                                     text="Observações"
+                                     prefWidth="210.0"/>
+                        <TableColumn fx:id="colunaAlterar"
+                                     text="ALTERAR"
+                                     prefWidth="110.0"/>
+                        <TableColumn fx:id="colunaFazerLance"
+                                     text="FAZER&#10;LANCE"
+                                     prefWidth="120.0"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </HBox>
+    </VBox>
+</StackPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/26.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           prefWidth="1280.0"
+           prefHeight="720.0"
+           stylesheets="@css/cadastro-leilao.css"
+           styleClass="tela-cadastro-leilao">
+
+    <VBox alignment="TOP_CENTER"
+          prefWidth="600.0"
+          maxWidth="600.0"
+          prefHeight="590.0"
+          maxHeight="590.0"
+          spacing="0"
+          styleClass="painel-cadastro-leilao">
+
+        <padding>
+            <Insets top="28.0" right="27.0" bottom="30.0" left="27.0"/>
+        </padding>
+
+        <Label text="CADASTRO DE LEILÃO" styleClass="titulo-tela"/>
+        <Label text="Estamos quase lá..." styleClass="subtitulo-tela"/>
+        <Region prefHeight="28.0"/>
+
+        <VBox alignment="CENTER_LEFT" prefWidth="390.0" maxWidth="390.0" spacing="7.0">
+            <Label text="LANCE MÍNIMO" styleClass="rotulo-campo"/>
+            <TextField fx:id="campoLanceMinimo"
+                       prefHeight="48.0"
+                       maxWidth="Infinity"
+                       promptText="R$ 0,00"
+                       styleClass="campo-texto"/>
+
+            <Region prefHeight="10.0"/>
+
+            <HBox alignment="TOP_LEFT" spacing="85.0">
+                <VBox spacing="7.0">
+                    <Label text="DATA:" styleClass="rotulo-campo"/>
+                    <DatePicker fx:id="campoData"
+                                prefWidth="210.0"
+                                prefHeight="48.0"
+                                styleClass="campo-data"/>
+                </VBox>
+
+                <VBox spacing="7.0">
+                    <Label text="HORA:" styleClass="rotulo-campo"/>
+                    <TextField fx:id="campoHora"
+                               prefWidth="95.0"
+                               prefHeight="48.0"
+                               promptText="00:00"
+                               styleClass="campo-texto"/>
+                </VBox>
+            </HBox>
+
+            <Region prefHeight="10.0"/>
+            <Label text="OBSERVAÇÕES:" styleClass="rotulo-campo"/>
+            <TextArea fx:id="campoObservacoes"
+                      prefHeight="100.0"
+                      maxHeight="100.0"
+                      maxWidth="Infinity"
+                      wrapText="true"
+                      styleClass="campo-observacoes"/>
+        </VBox>
+
+        <Region VBox.vgrow="ALWAYS"/>
+
+        <HBox alignment="CENTER" spacing="190.0">
+            <Button fx:id="botaoVoltarGado" text="VOLTAR" styleClass="botao-voltar"/>
+            <Button fx:id="botaoCadastrar" text="CADASTRAR" styleClass="botao-cadastrar"/>
+        </HBox>
+    </VBox>
+</StackPane>

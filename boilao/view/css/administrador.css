@@ -1,0 +1,57 @@
+.tela-administrador {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(25, 10, 4, 0.25), transparent 14%, rgba(25, 10, 4, 0.25) 15%, transparent 30%, rgba(25, 10, 4, 0.20) 31%, transparent 46%, rgba(25, 10, 4, 0.25) 47%, transparent 63%, rgba(25, 10, 4, 0.22) 64%, transparent 80%, rgba(25, 10, 4, 0.25) 81%, transparent),
+        linear-gradient(to right, #32170c, #70401f 18%, #3a1b0e 36%, #744321 55%, #35180c 72%, #6b391c 88%, #2c1309);
+    -fx-background-image: url("../images/madeira.jpg");   
+}
+
+.painel-administrador {
+    -fx-background-color: #e8d5a2;
+    -fx-border-color: #d2ba7e;
+    -fx-border-width: 1px;
+}
+
+.link-logout {
+    -fx-font-family: "Arial";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+    -fx-underline: true;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.link-logout:hover {
+    -fx-text-fill: #b00000;
+}
+
+.titulo-administrador {
+    -fx-font-family: "Arial";
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.botao-menu {
+    -fx-background-color: #879742;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0;
+    -fx-font-family: "Arial";
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-underline: true;
+    -fx-alignment: center;
+    -fx-padding: 4px 10px;
+    -fx-cursor: hand;
+}
+
+.botao-menu:hover {
+    -fx-background-color: #9aaa50;
+}
+
+.botao-menu:pressed {
+    -fx-background-color: #718033;
+}

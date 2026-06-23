@@ -1,0 +1,48 @@
+.tela-licitante-menu {
+    -fx-background-color: #3b1c10;
+    -fx-background-image: url("../images/madeira.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}
+
+.painel-menu {
+    -fx-background-color: #e7d5a8;
+    -fx-border-color: #d2ba7e;
+    -fx-border-width: 1px;
+}
+
+.titulo-menu {
+    -fx-font-family: "Arial";
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.link-logout {
+    -fx-font-family: "Arial";
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+    -fx-underline: true;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.botao-menu {
+    -fx-background-color: #879742;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-font-family: "Arial";
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-underline: true;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+}
+
+.botao-menu:hover {
+    -fx-background-color: #9aaa50;
+}
